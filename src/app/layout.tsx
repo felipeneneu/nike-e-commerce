@@ -1,16 +1,20 @@
-import type { Metadata } from "next";
-import { Jost } from "next/font/google";
-import "./globals.css";
-import { NextFontWithVariable } from "next/dist/compiled/@next/font";
+import type { Metadata } from 'next';
+import './globals.css';
+import type { NextFontWithVariable } from 'next/dist/compiled/@next/font';
+import { Inter, Jost } from 'next/font/google';
 
 const jost: NextFontWithVariable = Jost({
   variable: '--font-jost',
-  subsets: ['latin']
-})
+  subsets: ['latin'],
+});
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
-  title: "Nike",
-  description: "An e-commerce website for Nike products",
+  title: 'Nike',
+  description: 'An e-commerce website for Nike products',
 };
 
 export default function RootLayout({
@@ -20,9 +24,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${jost.className} antialiased`}
-      >
+      <link href="/icon.svg" rel="icon" sizes="any" type="image/svg+xml" />
+      <body className={`${jost.className} ${inter.className} antialiased`}>
         {children}
       </body>
     </html>

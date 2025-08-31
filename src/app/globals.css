@@ -1,60 +1,55 @@
 @import "tailwindcss";
 
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-jost: 'Jost', sans-serif;
 
-@theme {
-  /* Dark Colors */
-  --color-dark-900: #111111;
-  --color-dark-700: #757575;
-  --color-dark-500: #AAAAAA;
+  --color-dark-900: #000000;
+  --color-dark-700: #8D8D8D;
+  --color-dark-500: #F5F5F5;
 
-  /* Light Colors */
   --color-light-100: #ffffff;
   --color-light-200: #F5F5F5;
   --color-light-300: #E5E5E5;
   --color-light-400: #CCCCCC;
 
-  /* Accent Colors */
   --color-green: #007d48;
   --color-red: #d33918;
   --color-orange: #d37918;
-  
-  /* Font family */
-  --font-josh: 'Jost', sans-serif;
-
-   /* Heading sizes */
-  --text-heading-1: 72px;
-  --text-heading-1--line-height: 78px;
-  --text-heading-1--font-weight: 700;
-
-  --text-heading-2: 56px;
-  --text-heading-2--line-height: 60px;
-  --text-heading-2--font-weight: 700;
-
-  --text-heading-3: 24px;
-  --text-heading-3--line-height: 30px;
-  --text-heading-3--font-weight: 500;
-
-  /* Lead */
-  --text-lead: 20px;
-  --text-lead--line-height: 28px;
-  --text-lead--font-weight: 500;
-
-  /* Body */
-  --text-body: 16px;
-  --text-body--line-height: 24px;
-  --text-body--font-weight: 400;
-
-  --text-body-medium: 16px;
-  --text-body-medium--line-height: 24px;
-  --text-body-medium--font-weight: 500;
-
-  /* Caption */
-  --text-caption: 14px;
-  --text-caption--line-height: 20px;
-  --text-caption--font-weight: 500;
-
-  /* Footnote */
-  --text-footnote: 12px;
-  --text-footnote--line-height: 18px;
-  --text-footnote--font-weight: 400;
 }
+
+@layer utilities {
+  .padding {
+    @apply sm:px-16 px-8 sm:py-24 py-12;
+  }
+
+  .padding-x {
+    @apply sm:px-16 px-8;
+  }
+
+  .padding-y {
+    @apply sm:py-16 py-8;
+  }
+
+  .padding-l {
+    @apply sm:pl-16 pl-8;
+  }
+
+  .padding-r {
+    @apply sm:pr-16 pr-8;
+  }
+
+  .padding-t {
+    @apply sm:pt-16 pt-8;
+  }
+
+  .padding-b {
+    @apply sm:pb-16 pb-8;
+  }
+
+  .max-container {
+    @apply max-w-[1440px] mx-auto;
+  }
+}
+
+
